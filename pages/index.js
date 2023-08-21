@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import NextLink from 'next/link'
 import {
   Link,
@@ -37,7 +38,7 @@ const Home = () => (
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hello, I&apos;m an indie app developer based in Japan!
+        Hello, I am a DevOps/Full-Stack Engineer based in Texas!
       </Box>
 
       <Box display={{ md: 'flex' }}>
