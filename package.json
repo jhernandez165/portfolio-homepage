@@ -22,7 +22,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
-    "three": "^0.148.0"
+    "three": "^0.148.0",
+    "@chakra-ui/system": "^2.0.0",
+    "@emotion/babel-plugin": "^11.10.5",
+    "@babel/core": "^7.0.0",
+    "typescript": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "^8.31.0",
