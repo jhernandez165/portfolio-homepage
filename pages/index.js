@@ -79,12 +79,12 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          Jonathan is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
+          Jonathan is a DevOps and a Full-Stack Developer based in Dallas with a
+          passion for building digital services and websites. He has a knack
+          for all things SDLC, from planning and designing all the
           way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
+          traveling in Mexico. Currently, he is searching for new opportunities 
+          in both DevOps Engineering or Full-Stack Development. {' '}
           <Link as={NextLink} href="/works/inkdrop" passHref scroll={false}>
             Inkdrop
           </Link>
@@ -118,22 +118,28 @@ const Home = () => (
           Bio
         </Heading>
         <BioSection>
-          <BioYear>1984</BioYear>
-          Born in Osaka (大阪), Japan.
+          <BioYear>May 2021 - August 2021</BioYear>
+          Served as a Research Assistant at the University of Alabama, conducting research on hearing and healthcare accessibility.
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Completed the Master&apos;s Program in the Graduate School of
-          Information Science at Nara Institute of Science and Technology
-          (奈良先端科学技術大学院大学情報科学研究科修士課程)
+          <BioYear>August 2021 - February 2022</BioYear>
+          Worked as a Space Instrumentation Student Engineer at Southwest Research Institute, contributing to design and hardware assembly.
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Worked at Yahoo! Japan (ヤフー株式会社入社)
+          <BioYear>November 2021 - November 2022</BioYear>
+          Joined Elbit Systems of America as a Software Systems Engineer, focusing on system requirements specifications and software configuration.
         </BioSection>
         <BioSection>
-          <BioYear>2012 to present</BioYear>
-          Working as a freelancer
+          <BioYear>December 2022 - Present</BioYear>
+          Became a DevOps Engineer at Options Clearing Company, enhancing third-party tool support and streamlining automation processes.
+        </BioSection>
+        <BioSection>
+          <BioYear>2022</BioYear>
+          Graduated with a Bachelor's degree in Mechanical Engineering and Spanish.
+        </BioSection>
+        <BioSection>
+          <BioYear>2023</BioYear>
+          Began a Master's program.
         </BioSection>
       </Section>
 
@@ -160,44 +166,11 @@ const Home = () => (
         </Heading>
         <List>
           <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
+            <Link href="https://github.com/jhernandez165" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoGithub />}
-              >
-                @craftzdog
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @inkdrop_app (English)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @craftzdog (日本語)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoInstagram />}
               >
                 @craftzdog
               </Button>
