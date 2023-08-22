@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '../lib/model'
+
 import { DogSpinner, DogContainer } from './voxel-dog-loader'
 
 function easeOutCirc(x) {
@@ -13,12 +14,12 @@ const VoxelDog = () => {
   const [loading, setLoading] = useState(true)
   const [renderer, setRenderer] = useState()
   const [_camera, setCamera] = useState()
-  const [target] = useState(new THREE.Vector3(0, 0.7, 0))
+  const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0))
   const [initialCameraPosition] = useState(
     new THREE.Vector3(
-      1000 ,
-     1000,
-      1000
+      20 * Math.sin(0.2 * Math.PI),
+      10,
+      20 * Math.cos(0.2 * Math.PI)
     )
   )
   const [scene] = useState(new THREE.Scene())
@@ -53,14 +54,14 @@ const VoxelDog = () => {
 
       // 640 -> 240
       // 8   -> 6
-      const scale = scH * 0.0000001 + 2
+      const scale = scH * 0.005 + 4.8
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,
         scale,
         -scale,
-        1,
-        99999
+        0.01,
+        50000
       )
       camera.position.copy(initialCameraPosition)
       camera.lookAt(target)
@@ -73,27 +74,14 @@ const VoxelDog = () => {
       controls.autoRotate = true
       controls.target = target
       setControls(controls)
-
-      loadGLTFModel(scene, '/scene.gltf', {
-        receiveShadow: false,
-        castShadow: false
+      
+      loadGLTFModel(scene, '/scene.glb', {
+        receiveShadow: true,
+        castShadow: true
       }).then(() => {
         animate()
         setLoading(false)
       })
-
-      function addStar() {
-        const geometry = new THREE.SphereGeometry(.02, 24, 24);
-        const material = new THREE.MeshStandardMaterial({ color: 0xFFFF00});
-        const star = new THREE.Mesh(geometry, material);
-        const [x, y, z] = Array(3)
-          .fill()
-          .map(() => THREE.MathUtils.randFloatSpread(10));
-        star.position.set(x, y, z);
-        scene.add(star);
-      }
-  
-      Array(50).fill().forEach(addStar);
 
       let req = null
       let frame = 0
@@ -106,8 +94,8 @@ const VoxelDog = () => {
           const p = initialCameraPosition
           const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
 
-          camera.position.y = 0
-          camera.position.x = 
+          camera.position.y = 10
+          camera.position.x =
             p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed)
           camera.position.z =
             p.z * Math.cos(rotSpeed) - p.x * Math.sin(rotSpeed)
