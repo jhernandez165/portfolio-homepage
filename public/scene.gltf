@@ -158,9 +158,9 @@
         0.9088624119758606,
         2.01807995198391e-16,
         0.0,
-        0.0, // Adjusted x translation
-        0.0, // Adjusted y translation
-        0.0,
+        26.114089965820313,
+        5.487552642822266,
+        1.2184814585807814e-15,
         1.0
       ],
       "name": "Sketchfab_model"
@@ -182,9 +182,9 @@
         0.0,
         1.0,
         0.0,
-        0.0, // Adjusted x translation
-        0.0, // Adjusted y translation
-        0.0, // Adjusted z translation
+        -57.5,
+        -62.5,
+        8.0,
         1.0
       ],
       "name": "planet_lava.obj.cleaner.materialmerger.gles"
