@@ -59,8 +59,8 @@ const VoxelDog = () => {
         scale,
         scale,
         -scale,
-        0.01,
-        50000
+        1,
+        99999
       )
       camera.position.copy(initialCameraPosition)
       camera.lookAt(target)
