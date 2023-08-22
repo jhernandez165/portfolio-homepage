@@ -1,4 +1,5 @@
 import Link from 'next/link'
+mport Image from 'next/image'
 import { Text, useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
